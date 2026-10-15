@@ -15,7 +15,7 @@ const config = {
   url: process.env.TARGET_URL || 'https://genuitec.com',
 
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/products/changereview/',
+  baseUrl: process.env.TARGET_BASE_URL || '/products/changereview/',
   onBrokenLinks: 'warn',
 
   markdown: {

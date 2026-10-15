@@ -28,16 +28,15 @@ This command generates static content into the `build` directory and can be serv
 
 ## Deployment
 
-Using SSH:
+GitHub Actions builds and deploys this site on pushes to main. You can also
+run **Deploy documentation to GitHub Pages** manually from the repository's
+**Actions** tab.
 
-```bash
-USE_SSH=true npm run deploy
-```
+In repository **Settings > Pages**, set **Source** to **GitHub Actions**.
 
-Not using SSH:
+The workflow uses GitHub Pages' configured origin and base path. For this
+repository, the default address is https://genuitec.github.io/ChangeReview-docs/.
 
-```bash
-GIT_USER=<Your GitHub username> npm run deploy
-```
-
-If you are using GitHub Pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Local builds retain the Genuitec production defaults:
+https://genuitec.com/products/changereview/. Override TARGET_URL and
+TARGET_BASE_URL to build for another host.
