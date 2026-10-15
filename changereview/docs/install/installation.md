@@ -2,10 +2,14 @@
 
 Install ChangeReview from Eclipse Marketplace, then restart Eclipse.
 
-:::info 1.0 Early Access 1
-Please test drive ChangeReview and share your feedback on the
+## 1.0 Early Access 1
+
+ChangeReview 1.0 Early Access 1 is usable for **45 days from installation**.
+To continue using ChangeReview after that period, install a newer release.
+The production release is expected in **November 2026**.
+
+Please test drive ChangeReview and share feedback or report issues on the
 [Support Forum](https://github.com/Genuitec/ChangeReview-community/discussions).
-:::
 
 ## Prerequisites
 
@@ -46,8 +50,6 @@ try [Live Review](../basics/editor-review).
 
 Open **Help > Check for Updates**, select an available ChangeReview update,
 and follow the prompts. Restart Eclipse to complete the update.
-
-{/* TODO: Confirm whether EA builds expire and document the exact policy here. */}
 
 ## Uninstalling
 

@@ -16,10 +16,12 @@ you already use. ChangeReview shows added lines in green and deleted lines as
 red gaps, with full syntax coloring.
 
 :::info 1.0 Early Access 1
-Test drive ChangeReview and tell us what you think on the
+ChangeReview 1.0 Early Access 1 is usable for **45 days from installation**.
+The production release is expected in **November 2026**.
+
+Share your feedback on the
 [Support Forum](https://github.com/Genuitec/ChangeReview-community/discussions).
-Your feedback helps shape
-the production release.
+Your feedback helps shape the production release.
 :::
 
 [Install ChangeReview](./install/installation.md)
