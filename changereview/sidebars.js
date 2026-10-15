@@ -25,6 +25,7 @@ const sidebars = {
     },
     { type: 'doc', label: 'Getting Help', id: 'getting-help/getting-help' },
     { type: 'doc', label: 'Changelog', id: 'resources/changelog' },
+    { type: 'doc', label: 'End User License Agreement', id: 'resources/eula' },
   ],
 };
 
