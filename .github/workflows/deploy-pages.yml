@@ -1,4 +1,7 @@
-name: Deploy documentation to GitHub Pages
+name: Deploy redirects to GitHub Pages
+
+# This site has moved to https://genuitec.github.io/eclipse-ai-tools/.
+# The pages published here only redirect old links there; see tools/make_redirects.py.
 
 on:
   push:
@@ -14,31 +17,15 @@ concurrency:
 
 jobs:
   build:
-    permissions:
-      contents: read
-      pages: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-          cache-dependency-path: changereview/package-lock.json
       - uses: actions/configure-pages@v5
-        id: pages
-      - name: Install dependencies
-        run: npm ci
-        working-directory: changereview
-      - name: Build documentation
-        run: npm run build
-        working-directory: changereview
-        env:
-          TARGET_URL: ${{ steps.pages.outputs.origin }}
-          TARGET_BASE_URL: ${{ steps.pages.outputs.base_path }}/
+      - name: Generate redirect pages
+        run: python3 tools/make_redirects.py
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: changereview/build
+          path: redirects
 
   deploy:
     needs: build
